@@ -52,7 +52,7 @@ spec:
   security:
     authentication:
       modes: ["SCRAM"]
-      ```
+      
 Adjust the configuration based on your requirements, such as the number of replica set members, MongoDB version, and authentication settings.
 
 Deploy the MongoDB replica set:
