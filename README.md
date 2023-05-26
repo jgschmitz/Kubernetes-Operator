@@ -51,8 +51,10 @@ spec:
   version: "4.4.5"
   security:
     authentication:
-      modes: ["SCRAM"]
+      modes: ["SCRAM"] 
+```      
       
+     
 Adjust the configuration based on your requirements, such as the number of replica set members, MongoDB version, and authentication settings.
 
 Deploy the MongoDB replica set:
