@@ -15,23 +15,23 @@ Before proceeding with the deployment, ensure that you have the following prereq
 ### Step 1: Create a Namespace
 
 Create a Kubernetes namespace to isolate the MongoDB resources:
-
+```
 kubectl create namespace my-mongodb
-
+```
 less
 Copy code
 
 ### Step 2: Create a Secret
 
 Create a Kubernetes secret to store the MongoDB admin credentials:
-
+```
 kubectl create secret generic my-mongodb-credentials
 --namespace my-mongodb
 --from-literal=mongodb-admin-username=<admin_username>
 --from-literal=mongodb-admin-password=<admin_password>
+```
 
 yaml
-Copy code
 
 Replace `<admin_username>` and `<admin_password>` with the desired MongoDB admin username and password.
 
