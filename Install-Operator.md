@@ -15,29 +15,25 @@ Before proceeding with the installation, ensure that you have the following prer
 
 Add the MongoDB Helm repository to your Helm configuration:
 
-```shell
+```
 helm repo add mongodb https://charts.mongodb.com/stable
+```
 helm repo update
+```
 Step 2: Install the MongoDB Kubernetes Operator
 Install the MongoDB Kubernetes Operator using Helm:
-
-shell
-Copy code
+```
 helm install my-mongodb-operator \
   --namespace my-mongodb \
   --set securityContext.enabled=false \
   --set serviceAccounts.agent.create=false \
   mongodb/mongodb-kubernetes-operator
+  ```
 Adjust the values based on your requirements. In this example, we install the operator in the my-mongodb namespace. The securityContext.enabled=false flag is used for demonstration purposes and can be adjusted based on your security requirements.
 
 Step 3: Verify the Installation
 Check the status of the MongoDB Kubernetes Operator deployment:
-
-shell
-Copy code
+```
 kubectl get pods -n my-mongodb
+```
 Ensure that the MongoDB Kubernetes Operator pods are running and ready.
-
-Conclusion
-In this guide, you successfully installed the MongoDB Kubernetes Operator, which allows you to manage MongoDB deployments on Kubernetes. You can now proceed to deploy and manage MongoDB clusters using the operator.
-
