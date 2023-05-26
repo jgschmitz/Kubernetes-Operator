@@ -42,7 +42,7 @@ metadata:
 spec:
   members: 3
   type: ReplicaSet
-  version: "4.4.5"
+  version: "6.3.1"
   security:
     authentication:
       modes: ["SCRAM"] 
