@@ -18,3 +18,40 @@ Create a Kubernetes namespace to isolate the MongoDB resources:
 
 ```shell
 kubectl create namespace my-mongodb
+
+kubectl create secret generic my-mongodb-credentials \
+  --namespace my-mongodb \
+  --from-literal=mongodb-admin-username=<admin_username> \
+  --from-literal=mongodb-admin-password=<admin_password>
+
+Replace <admin_username> and <admin_password> with the desired MongoDB admin username and password.
+
+Step 3: Deploy the MongoDB Replica Set
+Create a YAML file, for example mongodb-replicaset.yaml, with the following content:
+
+apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: my-mongodb
+  namespace: my-mongodb
+spec:
+  members: 3
+  type: ReplicaSet
+  version: "4.4.5"
+  security:
+    authentication:
+      modes: ["SCRAM"]
+
+Adjust the configuration based on your requirements, such as the number of replica set members, MongoDB version, and authentication settings.
+
+Deploy the MongoDB replica set:
+
+kubectl get mongodb -n my-mongodb
+
+Step 5: Connect to the Replica Set
+To connect to the MongoDB replica set, retrieve the connection details:
+
+kubectl get mongodb -n my-mongodb -o jsonpath='{.items[0].status.connectionString}'
+
+Conclusion
+In this guide, you successfully deployed a MongoDB replica set using the MongoDB Kubernetes Operator. You can now leverage the power and scalability of MongoDB on Kubernetes for your applications.
