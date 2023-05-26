@@ -52,35 +52,26 @@ spec:
   security:
     authentication:
       modes: ["SCRAM"]
+      ```
 Adjust the configuration based on your requirements, such as the number of replica set members, MongoDB version, and authentication settings.
 
 Deploy the MongoDB replica set:
-
-Copy code
+```
 kubectl apply -f mongodb-replicaset.yaml
+```
 Step 4: Verify the Deployment
 Check the status of the MongoDB replica set deployment:
-
-arduino
-Copy code
+```
 kubectl get mongodb -n my-mongodb
+```
 Ensure that the STATUS is Running and the READY count matches the number of replica set members.
 
 Step 5: Connect to the Replica Set
 To connect to the MongoDB replica set, retrieve the connection details:
-
-arduino
-Copy code
+```
 kubectl get mongodb -n my-mongodb -o jsonpath='{.items[0].status.connectionString}'
+```
 Use the obtained connection string to connect to the replica set from your application or MongoDB client.
 
 Conclusion
 In this guide, you successfully deployed a MongoDB replica set using the MongoDB Kubernetes Operator. You can now leverage the power and scalability of MongoDB on Kubernetes for your applications.
-
-css
-Copy code
-
-Feel free to copy and paste the above Markdown content as needed.
-
-
-
