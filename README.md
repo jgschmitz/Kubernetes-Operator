@@ -18,9 +18,6 @@ Create a Kubernetes namespace to isolate the MongoDB resources:
 ```
 kubectl create namespace my-mongodb
 ```
-less
-Copy code
-
 ### Step 2: Create a Secret
 
 Create a Kubernetes secret to store the MongoDB admin credentials:
@@ -30,9 +27,6 @@ kubectl create secret generic my-mongodb-credentials
 --from-literal=mongodb-admin-username=<admin_username>
 --from-literal=mongodb-admin-password=<admin_password>
 ```
-
-yaml
-
 Replace `<admin_username>` and `<admin_password>` with the desired MongoDB admin username and password.
 
 ### Step 3: Deploy the MongoDB Replica Set
@@ -53,8 +47,7 @@ spec:
     authentication:
       modes: ["SCRAM"] 
 ```      
-      
-     
+           
 Adjust the configuration based on your requirements, such as the number of replica set members, MongoDB version, and authentication settings.
 
 Deploy the MongoDB replica set:
