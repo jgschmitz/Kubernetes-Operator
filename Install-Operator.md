@@ -28,7 +28,7 @@ helm install my-mongodb-operator \
   --set securityContext.enabled=false \
   --set serviceAccounts.agent.create=false \
   mongodb/mongodb-kubernetes-operator
-  ```
+```  
 Adjust the values based on your requirements. In this example, we install the operator in the my-mongodb namespace. The securityContext.enabled=false flag is used for demonstration purposes and can be adjusted based on your security requirements.
 
 Step 3: Verify the Installation
