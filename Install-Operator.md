@@ -22,7 +22,7 @@ helm repo update
 ```
 Step 2: Install the MongoDB Kubernetes Operator
 Install the MongoDB Kubernetes Operator using Helm:
-```
+
 ```
 helm install my-mongodb-operator \
   --namespace my-mongodb \
