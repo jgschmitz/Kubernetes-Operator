@@ -18,7 +18,7 @@ Add the MongoDB Helm repository to your Helm configuration:
 ```
 helm repo add mongodb https://charts.mongodb.com/stable
 ```
-
+```
 helm repo update
 
 ```
