@@ -70,3 +70,6 @@ Use the obtained connection string to connect to the replica set from your appli
 
 Conclusion
 In this guide, you successfully deployed a MongoDB replica set using the MongoDB Kubernetes Operator. You can now leverage the power and scalability of MongoDB on Kubernetes for your applications.
+
+[MongoDB Kubernetes Operator Documentation](https://www.mongodb.com/docs/kubernetes-operator/stable/)
+
