@@ -40,3 +40,5 @@ Check the status of the MongoDB Kubernetes Operator deployment:
 kubectl get pods -n my-mongodb
 ```
 Ensure that the MongoDB Kubernetes Operator pods are running and ready.
+
+[MongoDB Kubernetes Operator Installation Documentation](https://www.mongodb.com/docs/kubernetes-operator/stable/tutorial/install-k8s-operator/#install-k8s)
