@@ -19,7 +19,7 @@ Add the MongoDB Helm repository to your Helm configuration:
 helm repo add mongodb https://charts.mongodb.com/stable
 ```
 helm repo update
-```
+
 Step 2: Install the MongoDB Kubernetes Operator
 Install the MongoDB Kubernetes Operator using Helm:
 ```
